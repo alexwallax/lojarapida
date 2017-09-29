@@ -14,8 +14,8 @@
                 <h:panelGrid columns="1">
                     <h:outputLabel value="Nome" for="nome" />
                     <h:inputText id="nome" value="#{categoriaBean.categoria.nome}" />
-                    <h:outputLabel value="Descrição" for="descricao" value="#{categoriaBean.categoria.descricao}" />
-                    <h:inputTextarea id="descricao" cols="" rows="" />
+                    <h:outputLabel value="Descrição" for="descricao"  />
+                    <h:inputTextarea id="descricao" value="#{categoriaBean.categoria.descricao}" />
                     <h:commandButton value="Salvar" action="#{categoriaBean.salvar}" />    
                 </h:panelGrid>
 
