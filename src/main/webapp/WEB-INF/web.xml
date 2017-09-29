@@ -8,7 +8,7 @@
         <param-value>Development</param-value>
     </context-param>
     
-    <display-name>Loja Rapida</display-name>
+    <display-name>lojaRapida</display-name>
     
         <welcome-file-list>
             <welcome-file>index.xhtml</welcome-file>
