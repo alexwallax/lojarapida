@@ -18,14 +18,14 @@ public class CategoriaBean {
     
     public void editar(Categoria categoria){
         CategoriaDAO dao = new CategoriaDAO();
-        dao.update(this.categoria);
-        this.categoria = new Categoria();
+        dao.update(categoria);
+       
     }
     
     public void remover(Categoria categoria){
         CategoriaDAO dao = new CategoriaDAO();
-        dao.delete(this.categoria);
-        this.categoria = new Categoria();
+        dao.delete(categoria);
+     
     }
     
     public List<Categoria> getCategorias(){
