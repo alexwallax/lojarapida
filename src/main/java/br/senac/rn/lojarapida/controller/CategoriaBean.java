@@ -5,7 +5,7 @@ import br.senac.rn.lojarapida.model.Categoria;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 
-@ManagedBean(name = "categoriaBean") // informa p o jsf e um gerenciador de telas
+@ManagedBean(name = "categoriaBean")// informa p o jsf e um gerenciador de telas
 public class CategoriaBean {
     
     private Categoria categoria = new Categoria();
