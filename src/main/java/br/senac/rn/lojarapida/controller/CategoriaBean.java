@@ -24,8 +24,7 @@ public class CategoriaBean {
     
     public void remover(Categoria categoria){
         CategoriaDAO dao = new CategoriaDAO();
-        dao.delete(categoria);
-     
+        dao.delete(categoria); 
     }
     
     public List<Categoria> getCategorias(){
