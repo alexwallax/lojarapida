@@ -17,11 +17,15 @@ public class CategoriaBean {
     }
     
     public void editar(Categoria categoria){
-    
+        CategoriaDAO dao = new CategoriaDAO();
+        dao.update(this.categoria);
+        this.categoria = new Categoria();
     }
     
     public void remover(Categoria categoria){
-    
+        CategoriaDAO dao = new CategoriaDAO();
+        dao.delete(this.categoria);
+        this.categoria = new Categoria();
     }
     
     public List<Categoria> getCategorias(){
