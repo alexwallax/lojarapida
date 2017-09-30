@@ -16,6 +16,14 @@ public class CategoriaBean {
         this.categoria = new Categoria();
     }
     
+    public void editar(Categoria categoria){
+    
+    }
+    
+    public void remover(Categoria categoria){
+    
+    }
+    
     public List<Categoria> getCategorias(){
        CategoriaDAO dao = new CategoriaDAO();
        return dao.selectAll();
