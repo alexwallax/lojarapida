@@ -2,7 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html 
     xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html">
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
     <h:head>
         <title>Categoria</title>
     </h:head>
@@ -21,7 +23,32 @@
 
             </h:form>     
         </fieldset>
-
+        <fieldset>
+            
+            <legend>Lista de categorias</legend>
+            <h:form>
+                <h:dataTable value="#{categoriaBean.categorias}" var="categoria">
+                    <h:column>
+                        <f:facet name="header">Id</f:facet>
+                        <h:outputText value="#{categoria.id}" />
+                    </h:column>
+                    <h:column>
+                         <f:facet name="header">Nome</f:facet>
+                        <h:outputText value="#{categoria.nome}" />
+                    </h:column>
+                    
+                    <h:column>
+                        <h:outputText value="#{categoria.nome}" />
+                    </h:column>
+                    
+                    <h:column>
+                        <h:outputText value="#{categoria.nome}" />
+                    </h:column>
+                    
+                </h:dataTable>
+                
+            </h:form>
+        </fieldset>
     </h:body>
 </html>
 
