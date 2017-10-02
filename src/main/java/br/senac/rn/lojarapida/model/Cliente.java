@@ -9,10 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Cliente implements Serializable {
-    
+public class Cliente implements Serializable {    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private int id;
     private String nome;
     @Column(unique = true) // essa linha diz que o cpf nao pode reperitr
