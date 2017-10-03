@@ -18,7 +18,6 @@ public abstract class GenericDAO<T> {
         }
         return manager;
     }
-
     public T insert(T t) {
         EntityManager em = getEm();
         try {
@@ -56,8 +55,7 @@ public abstract class GenericDAO<T> {
             em.getTransaction().rollback();
         }
         return t;
-    }
-    
+    }   
     public T selectById(int id) {
         EntityManager em = getEm();
         return em.find(getClassType(), id);
