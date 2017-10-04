@@ -4,7 +4,10 @@ import br.senac.rn.lojarapida.dao.CategoriaDAO;
 import br.senac.rn.lojarapida.model.Categoria;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
+
+@ViewScoped
 @ManagedBean(name = "categoriaBean")// informa p o jsf e um gerenciador de telas
 public class CategoriaBean {
     
@@ -12,13 +15,17 @@ public class CategoriaBean {
     
     public void salvar(){
         CategoriaDAO dao = new CategoriaDAO();
+        if(this.categoria.getId() == 0){
         dao.insert(this.categoria);
+        }else{
+            dao.update(this.categoria);
+        }
         this.categoria = new Categoria();
     }
     
     public void editar(Categoria categoria){
-        CategoriaDAO dao = new CategoriaDAO();
-        dao.update(categoria);
+       this.categoria = categoria;
+       
        
     }
     
